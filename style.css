@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+}
+.cta-button {
+    display: inline-block; /* Allows us to set padding and margin */
+    background-color: #0f044eb6; /* Use your main accent color */
+    color: #ffffff; /* White text */
+    padding: 12px 24px; /* 12px top/bottom, 24px left/right */
+    margin-top: 15px; /* Add some space above it */
+    text-decoration: none; /* Ensure no underline */
+    font-weight: bold;
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cta-button:hover {
+    background-color: #16a085; /* A slightly darker shade for hover */
+}
+
+/* Remember to update the light-mode version too! */
+body.light-mode .cta-button {
+    background-color: #2980b9; /* Use your light-mode accent color */
+    color: #ffffff;
+}
+
+body.light-mode .cta-button:hover {
+    background-color: #2471a3; /* Darker shade for light-mode hover */
+}
+body {
+    background-color: #0b0e11; 
+    background-image: linear-gradient(to bottom right, #10355775, #000000);
+    color: #ecf0f1;       
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    color: #1abc9c; /* Use the same turquoise for consistency */
+    text-decoration: none; /* Removes the underline */
+}
+a:hover {
+    text-decoration: underline;
+}
+header {
+    text-align: center;
+    padding: 20px;
+}
+header p {
+    font-size: 20px;
+    color: #bdc3c7; /* A lighter, softer white/grey */
+}
+h1 {
+    font-size: 48px;
+    color: #259dd46c; /* A nice turquoise color */
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+h2 {
+    color: #259dd46c;  /* A nice bright blue */
+    margin-top: 60px;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #1abc9c;
+}
+main ul {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0;            /* Removes default browser padding on the list */
+    display: flex;         /* This turns on Flexbox! */
+    gap: 20px;             /* Adds 20px of space between the flex items */
+}
+main li {
+    background-color: #34495e; /* A slightly lighter dark blue */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #34495e; /* Same as project cards for consistency */
+}
+body.light-mode {
+    /* This will be the main light background and text color */
+    background-color: #ffffff; /* White */
+    background-image: none;    /* Turn off the gradient */
+    color: #333333;           /* Dark grey for text */
+}
+
+body.light-mode header,
+body.light-mode footer,
+body.light-mode main li {
+    /* Change the dark card/section backgrounds to a light grey */
+    background-color: #f4f4f4;
+}
+
+body.light-mode h1,
+body.light-mode a {
+    /* Change the main accent color. Let's pick a nice dark blue */
+    color: #2980b9;
+}
+
+body.light-mode .profile-picture {
+    /* Change the border color to match the new accent color */
+    border-color: #2980b9;
+}
+/* --- Media Query for Mobile --- */
+@media (max-width: 768px) {
+    
+    main ul {
+        flex-direction: column; /* This is the key change! */
+    }
+
+    h1 {
+        font-size: 36px; /* Make the main title smaller on mobile */
+    }
+
+    header p {
+        font-size: 16px; /* Adjust subheader font size */
+    }
+}
+.social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Add some space above the icons */
+}
+
+.social-icons li {
+    display: inline-block; /* Puts the icons in a row */
+    margin: 0 15px; /* Adds space between the icons */
+}
+
+.social-icons a {
+    font-size: 28px; /* Makes the icons bigger */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* We already styled a:hover, so the icons will get an underline.
+   Let's override that for a better effect on icons. */
+.social-icons a:hover {
+    text-decoration: none; /* No underline on icons */
+    color: #ffffff; /* Make them brighter on hover in dark mode */
+}
+
+body.light-mode .social-icons a:hover {
+    color: #333333; /* Make them darker on hover in light mode */
+}
